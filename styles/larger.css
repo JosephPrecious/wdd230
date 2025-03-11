@@ -1,0 +1,12 @@
+@media (min-width: 500px) {
+	.position {
+		display: flex;
+		flex: 1 1 100%;
+		
+	}
+
+	.secdiv
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
