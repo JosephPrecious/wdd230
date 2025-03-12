@@ -1,5 +1,5 @@
 *{
-	max-width: 0 auto;
+	max-width: auto;
 	padding: 0;
     margin: 0;
 	box-sizing: border-box;
@@ -14,7 +14,7 @@ header {
 	background-color: rgb(12, 51, 88);
 	display: flex;
 	align-items: center;
-	justify-content:space-around;
+	justify-content:center;
 	padding: 1rem;
 	border: 3px solid rgb(0 0 0 / 0.1);
     font-size: 3rem;
@@ -88,7 +88,6 @@ section
 {
     margin-top: 3rem;
     background-color: rgb(255, 255, 255);
-    box-shadow: #414242;
     border-radius: 10px;
     margin-bottom: 2rem;
 }
