@@ -24,7 +24,6 @@ header {
 header img{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    transition: 10s;
 }
 
 nav  {
@@ -62,7 +61,7 @@ main h1
 
 .Home
 {
-    background-color: rgb(252, 163, 17);
+    background-color: rgb(102, 7, 8);
     
 }
 
