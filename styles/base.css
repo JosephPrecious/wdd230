@@ -7,10 +7,11 @@
 body
 {
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(229, 229, 229);
 }
 
 header {
-	background-color: rgb(12, 51, 88);
+	background-color: rgb(20, 33, 61);
 	display: flex;
 	align-items: center;
 	justify-content:center;
@@ -22,9 +23,9 @@ header {
 
 header img{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-        border-radius: 1rem;
+    border-radius: 1rem;
+    transition: 10s;
 }
-
 
 nav  {
 	text-align: center;
@@ -33,10 +34,11 @@ nav  {
     display: grid;
     grid-gap: 1rem;
 }
+
 nav a
 {
     display: block;
-	color: #fff;
+	color: rgb(229, 229, 229);
 	text-align: center;
 	padding: 1rem;
 	text-decoration: none;
@@ -44,8 +46,7 @@ nav a
 
 .position
 {
-    background-color: #000000;
-    color: beige;
+    background-color: rgb(0, 0, 0);
 }
 
 nav a:hover {
@@ -58,9 +59,11 @@ main h1
     text-decoration: underline;
     margin-top: 2rem;
 }
+
 .Home
 {
-    background-color: rgb(5, 148, 0);
+    background-color: rgb(252, 163, 17);
+    
 }
 
 .secdiv
@@ -77,7 +80,7 @@ main h1
 
 .card h2
 {
-    background-color: rgb(12, 51, 88);
+    background-color: rgb(20, 33, 61);
     color: #fff;
     padding: 1rem;
     margin: auto;
@@ -92,13 +95,13 @@ section
 }
 
 .unstyle{
-list-style-type:none;
+    list-style-type:none;
 }
 
 
 footer
 {
-    background-color: #000000;
+    background-color: rgb(20, 33, 61);
 	margin: 1rem  auto;
     padding: 1rem;
     text-align: center;
