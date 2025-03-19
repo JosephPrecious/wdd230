@@ -1,12 +1,38 @@
 @media (min-width: 500px) {
-	.position {
+	.hamburger {
+		background: none;
+		border: none;
+		font-size: 2rem;
+		color: white;
+		cursor: pointer;
+		display: none;
+	}
+	
+	.menu {
 		display: flex;
 		flex: 1 1 100%;
-		
 	}
+
+	.menu a {
+        font-size: 1.2rem;
+    }
+	
+	.menu a:hover {
+		text-decoration:overline;
+		color: rgb(216, 214, 86);
+	}
+	
+
+    header {
+        font-size: 2.5rem;
+    }
+
+    .head-name {
+        font-size: 2rem;
+    }
 
 	.secdiv
     {
-        grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
     }
 }
