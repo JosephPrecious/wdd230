@@ -25,10 +25,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .div img {
-        height: 0 auto;
-    }
-
     .actioin {
         position: static;
         transform: none;
