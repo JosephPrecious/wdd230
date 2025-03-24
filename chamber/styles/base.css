@@ -1,0 +1,254 @@
+/* Global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://blush.design/api/download?shareUri=A-lPULXaiiWSKoj2&c=Hair_0%7E8280ce_Skin_0%7E764c36&w=800&h=800&fm=png') ;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    background-color: rgb(74, 78, 105);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header img {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+    max-width: 100%;
+    height: auto;
+}
+
+#mode {
+    cursor: pointer;
+    font-size: 2rem;
+    color:rgb(255, 255, 255);;
+}
+
+/* nav */
+nav {
+    width: 100%;
+    order: 2;
+}
+
+
+.head-one-one {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head-one-one img {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.headone-two{
+    color: rgb(36, 36, 35);
+    font-weight: bolder;
+    border: none;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 2rem;
+    position: relative;
+    border-style: groove;
+}
+
+nav a:hover {
+    color: rgb(252, 163, 17);
+}
+
+#menu .nav-links{
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+#menu .nav-links.show {
+    display: flex;
+}
+
+#menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+a.headone-two{
+    color: rgb(255, 255, 255);
+}
+#menu a:hover {
+    background-color: rgb(102, 7, 8);
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);;
+    font-size: 1.5rem;
+    order: 1;
+}
+
+/* Hero Section */
+main {
+    padding: 2rem 1rem;
+}
+
+.div {
+    position: relative;
+    text-align: center;
+}
+
+
+.div img
+{
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero{
+    max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+.action
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.action-one, .action-two {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: groove;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+    background-color: rgb(216, 180, 160);
+    font-weight: bolder;
+
+}
+
+
+.action-one:hover {
+    background-color: rgb(215, 122, 97);
+}
+
+.action-two:hover {
+    background-color: rgb(25, 133, 161);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+section.card{
+    border-style: ridge;
+}
+.card-one-one
+{
+    border-bottom-style:ridge;
+}
+.action-one, .action-two {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-one {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.card-two {
+    display: grid;
+    gap: 1rem;
+}
+
+.card-two section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-style: outset;
+}
+
+
+.sec-card{
+    background-color: rgb(34, 34, 59);
+    border-radius: 1rem;
+    border-bottom-style:ridge;
+    padding: 2rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.sec-card-one
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom-style:ridge;
+}
+
+
+/* Footer */
+footer {
+    justify-content: space-between;
+    background-color: rgb(74, 78, 105);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+footer img {
+    width: 10%;
+    height: auto;
+    margin-bottom: 1rem;
+}

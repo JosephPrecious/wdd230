@@ -1,0 +1,47 @@
+/* Larger Screens */
+@media (min-width: 768px) {
+    nav {
+        width: auto;
+        order: 0;
+    }
+    
+    #menu .nav-links {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .card-one {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .card-two {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .div img {
+        height: 0 auto;
+    }
+
+    .actioin {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+    }
+    
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: left;
+    }
+    
+    footer > div:last-child {
+        grid-column: 1 / -1;
+    }
+}
