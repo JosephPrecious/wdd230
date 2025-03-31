@@ -39,6 +39,17 @@
     
   
     <main>
+
+        <div class="hero">
+        <picture>
+            <source srcset="images/johannesburg_temple_small.webp" media="(max-width: 400px)">
+            <img src="images/johannesburg_south_africa_temple_lds.webp" alt="" width="960px" height="600px" loading="lazy">
+            <span> 
+                johannesburg south africa temple
+            </span>
+        </picture>
+        </div>
+
         <div class="header-style">
             <h1>
                 WDD 230: Web Frontend Development
@@ -59,10 +70,18 @@
         
             <section class="card">
                 <h2 class="htwo">Information</h2>
+                <p class="unstyle" > ☀️ 75◦F - Sunshin</p>
+                <p class="unstyle"><span class="label">Number of Visits: </span><span class="visits"></span></p>
             </section> 
-        </div>        
+        </div>   
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d718.8148962724774!2d7.491238625523705!3d5.526600006589769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1743012490924!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </main>
+
+    
     <footer>
+
         <p>©<span id="year"></span> Okoroji Precious Nigeria</p>
             <p>Last Modified: <span id="lastModified"></span></p>
     </footer>

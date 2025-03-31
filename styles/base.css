@@ -83,10 +83,51 @@ header img{
 
 /* main content */
 main {
-    padding: 1rem;
-
+    padding: 0.5rem;
+    max-width: 120rem;
+	margin: 0 auto;
 }
 
+.hero {
+	margin:10px auto;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	height: auto;
+}
+
+.hero img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+    display: block;
+}
+
+.hero span {
+    position: absolute;
+    border-style: groove;
+    bottom: 0;
+    left: 0;
+    color: rgb(229, 229, 229);
+    
+}
+.herolabel {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: radial-gradient(#fff, #4D5B97);
+	border: 1px solid rgba(0,0,0,.75);
+	padding: 1.5rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.75;
+	/* Buenas */
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: bolder;
+	font-size: larger;
+}
 .header-style
 {
     text-align: center;
@@ -126,6 +167,16 @@ main {
     border-radius: 10px;
 }
 
+.label {
+	font-weight: 700;
+}
+
+#visits {
+	color: navy;
+	font-weight: bolder;
+	font-size: larger;
+}
+
 /* list styles*/
 
 .unstyle{
@@ -145,6 +196,13 @@ main {
 
 .unstyle a:hover {
     color: rgb(102, 7, 8);
+}
+
+.map-container {
+    padding: 1rem;
+    background: rgb(229, 229, 229);
+    margin: 2rem 0;
+    box-shadow: 0 0 30px rgba(0.1, 0, 0, 0.2);
 }
 
 footer
