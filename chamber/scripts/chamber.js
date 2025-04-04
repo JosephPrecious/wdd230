@@ -57,25 +57,19 @@ modeButton.addEventListener("click", () => {
 
 // Visit tracking
 window.addEventListener('load', () => {
-    const visitMessage = document.getElementById('visit-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const currentDate = Date.now();
-    const oneDay = 86400000; // 24*60*60*1000
+    // Track visits with localStorage
+const visitDisplay = document.querySelector('#visit-message');
+let lastVisit = localStorage.getItem('lastVisit');
+const currentDate = Date.now();
 
-    let message;
-    
-    if (!lastVisit) {
-        message = "Welcome! Let us know if you have any questions.";
-    } else {
-        const daysBetween = Math.floor((currentDate - lastVisit) / oneDay);
-        
-        if (daysBetween === 0) {
-            message = "Back so soon! Awesome!";
-        } else {
-            message = `You last visited ${daysBetween} day${daysBetween === 1 ? '' : 's'} ago.`;
-        }
-    }
+if (!lastVisit) {
+    visitDisplay.textContent = "Welcome! Let us know if you have questions.";
+} else {
+    const daysBetween = Math.floor((currentDate - lastVisit) / 86400000);
+    visitDisplay.textContent = daysBetween === 0 
+        ? "Back so soon! Awesome!" 
+        : `You last visited ${daysBetween} day${daysBetween === 1 ? "" : "s"} ago.`;
+}
 
-    visitMessage.textContent = message;
-    localStorage.setItem('lastVisit', currentDate);
+localStorage.setItem('lastVisit', currentDate);
 });

@@ -340,6 +340,14 @@ footer img {
     font-style: italic;
 }
 
+.visit-msg {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+}
+
 /* Enhanced Sidebar Styles */
 .stat-label {
     font-weight: 600;
