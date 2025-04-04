@@ -33,51 +33,48 @@
             <a href="about.html" aria-label="Learn more about our company" class="Home">Home</a>
             <a href="chamber/index.html">Chamber</a>
             <a href="site-plan">Site Plan</a>
-            <a href="form.html">Form</a>
+            <a href="form">Form</a>
         </div>
     </nav>
     
   
     <main>
+        <form id="membershipForm" method="get" action="record.html">
+            <h1>Membership Application</h1>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
 
-        <div class="hero">
-        <picture>
-            <source srcset="images/johannesburg_temple_small.webp" media="(max-width: 400px)">
-            <img src="images/johannesburg_south_africa_temple_lds.webp" alt="" width="960" height="600" loading="lazy">
-        </picture>
-        <div class="image-caption"> 
-            johannesburg south africa temple
-        </div>
-        
-        </div>
+            <div class="form-group">
+                <label for="password">Password (min 8 characters):</label>
+                <input type="password" id="password" name="password" 
+                       pattern="[a-zA-Z0-9]{8,}" required>
+            </div>
 
-        <div class="header-style">
-            <h1>
-                WDD 230: Web Frontend Development
-            </h1>
-        </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
 
-        <div class="secdiv">
-            <section class="card">
-                <h2 class="htwo">Learning Activities</h2>
-                <ul class="unstyle">
-                    <li>Week 01: <a href="Week01">Layout|Media Query|JS Pen</a></li>
-                    <li>Week 02: <a href="Week02"></a></li>
-                    <li>Week 03: <a href="Week03"></a></li>
-                    <li>Week 04: <a href="Week04"></a></li>
-                    <li>Week 05: <a href="Week05"></a></li>
-                </ul>
-            </section>
-        
-            <section class="card">
-                <h2 class="htwo">Information</h2>
-                <p class="unstyle" > ☀️ 75◦F - Sunshin</p>
-                <p class="unstyle"><span class="label">Number of Visits: </span><span class="visits"></span></p>
-            </section> 
-        </div>   
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d718.8148962724774!2d7.491238625523705!3d5.526600006589769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1743012490924!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <div class="form-group">
+                <label for="email">BYU-Idaho Email:</label>
+                <input type="email" id="email" name="email" 
+                       pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
+                       title="Please enter a valid @byui.edu email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Page Rating (1-10):</label>
+                <input type="range" id="rating" name="rating" 
+                       min="1" max="10" value="5" 
+                       oninput="updateRating(this.value)">
+                <span id="ratingValue">5</span>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
     </main>
 
     

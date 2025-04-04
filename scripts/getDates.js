@@ -68,3 +68,19 @@
     
     // 💡A client can view the localStorage data using the Applications panel in the browsers's DevTools - check it out on any major site.
     
+    function updateRating(value) {
+        document.getElementById('ratingValue').textContent = value;
+    }
+
+    document.getElementById('membershipForm').addEventListener('submit', function(e) {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            document.getElementById('password').value = '';
+            document.getElementById('confirmPassword').value = '';
+            document.getElementById('password').focus();
+            e.preventDefault();
+        }
+    });
