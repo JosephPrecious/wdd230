@@ -67,6 +67,22 @@
         margin-right: 0.5rem;
     }
 
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        padding: 2rem;
+    }
+    
+    .benefits {
+        position: sticky;
+        top: 1rem;
+        align-self: start;
+    }
+    
+    .radio-group label {
+        padding: 1.5rem;
+    }
+
     /* Desktop-only hover effect */
     @media (hover: hover) {
         .image-card:hover {
