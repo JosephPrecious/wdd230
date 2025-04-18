@@ -573,7 +573,8 @@ button[type="submit"] {
 
 .member-info p {
     margin: 0.3rem 0;
-    color: #666;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight:bold ;
 }
 
 .member-website {
