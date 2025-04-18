@@ -72,17 +72,23 @@
         document.getElementById('ratingValue').textContent = value;
     }
 
-    document.getElementById('membershipForm').addEventListener('submit', function(e) {
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-        
-        if (password !== confirmPassword) {
-            alert('Passwords do not match!');
-            document.getElementById('password').value = '';
-            document.getElementById('confirmPassword').value = '';
-            document.getElementById('password').focus();
-            e.preventDefault();
-        }
+   const ratingInput = document.getElementById('rating');
+    const ratingValue = document.getElementById('rating-value');
+    ratingInput.addEventListener('input', () => {
+      ratingValue.textContent = ratingInput.value;
+    });
+
+    const form = document.querySelector('.user-form');
+    form.addEventListener('submit', (e) => {
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+      if (password !== confirm) {
+        alert('Passwords do not match. Please try again.');
+        e.preventDefault();
+        document.getElementById('password').value = '';
+        document.getElementById('confirm').value = '';
+        document.getElementById('password').focus();
+      }
     });
 
     const weatherInfo = document.getElementById('weather-info');

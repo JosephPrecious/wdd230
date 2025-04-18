@@ -40,43 +40,31 @@
     
   
     <main>
-        <form id="membershipForm" method="get" action="record.html">
-            <h1>Membership Application</h1>
+        <h1>Account Creation Form</h1>
+        <form method="get" action="record.html" class="user-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" required>
+          
+            <label for="confirm">Confirm Password:</label>
+            <input type="password" id="confirm" name="confirm" required>
+            <p id="debug"></p>
             
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password (min 8 characters):</label>
-                <input type="password" id="password" name="password" 
-                       pattern="[a-zA-Z0-9]{8,}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">BYU-Idaho Email:</label>
-                <input type="email" id="email" name="email" 
-                       pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
-                       title="Please enter a valid @byui.edu email address" required>
-            </div>
-
-            <div class="form-group">
-                <label for="rating">Page Rating (1-10):</label>
-                <input type="range" id="rating" name="rating" 
-                       min="1" max="10" value="5" 
-                       oninput="updateRating(this.value)">
-                <span id="ratingValue">5</span>
-            </div>
-
-            <button type="submit">Submit Application</button>
-        </form>
-    </main>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   pattern="[a-zA-Z0-9._%+\-]+@byui\.edu"
+                   title="Please enter a valid email address" required>
+          
+            <label for="rating">Page Rating: <span id="rating-value">5</span></label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
+          
+            <button type="submit">Submit</button>
+          </form>
+          
+      </main>
+    
 
     
     <footer>
@@ -84,5 +72,6 @@
         <p>©<span id="year"></span> Okoroji Precious Nigeria</p>
             <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
 </body>
 </html>

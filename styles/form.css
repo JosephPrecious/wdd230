@@ -1,59 +1,59 @@
 :root {
-    --primary-color: #1a365d;
-    --secondary-color: #e53e3e;
-    --spacing: 1.5rem;
-}
-
-form {
+    --primary-color: #1f3c88;
+    --accent-color: #fca311;
+    --form-border: #ccc;
+  }
+  
+  .user-form {
     max-width: 600px;
-    margin: var(--spacing) auto;
-    padding: var(--spacing);
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-.form-group {
-    margin-bottom: var(--spacing);
-}
-
-label {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid var(--form-border);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-form label {
     display: block;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-input {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .user-form input[type="text"],
+  .user-form input[type="password"],
+  .user-form input[type="email"],
+  .user-form input[type="range"] {
+    display: block;
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input:focus {
-    outline: 2px solid var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-button {
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid var(--form-border);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .user-form input[type="range"] {
+    padding: 0;
+  }
+  
+  .user-form button {
     background-color: var(--primary-color);
-    color: white;
-    padding: 1rem var(--spacing);
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    font-size: 1.1rem;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
-}
-
-#ratingValue {
-    display: inline-block;
-    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .user-form button:hover {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+  
+  #rating-value {
     font-weight: bold;
-    color: var(--primary-color);
-}
+    margin-left: 0.5rem;
+  }
+  
