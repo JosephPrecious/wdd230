@@ -84,3 +84,34 @@
             e.preventDefault();
         }
     });
+
+    const weatherInfo = document.getElementById('weather-info');
+    const apiKey = 'e204c804febcedeab100739eda6c5404';
+    const lat = '5.530244754131395';
+    const lon = '7.493441135878276';
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+    async function fetchWeather() {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Weather data unavailable');
+        const data = await response.json();
+        displayWeather(data);
+    } catch (error) {
+        weatherInfo.innerHTML = 'Failed to load weather data.';
+    }
+    }
+
+    function displayWeather(data) {
+    const temp = data.main.temp;
+    const desc = data.weather[0].description;
+    const icon = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    
+    weatherInfo.innerHTML = `
+        <span class="label">Weather: </span>
+        🌡️ ${Math.round(temp)}°F - ${desc} 
+        <img src="${icon}" alt="Weather icon" class="weather-icon">
+    `;
+    }
+
+    fetchWeather();

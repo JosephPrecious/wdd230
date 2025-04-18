@@ -1,0 +1,36 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {"url": "week01/holygrail.html", "title": "Holy Grail"},
+          {"url": "week01/media-query.html", "title": "Media Queries"},
+          {"url": "https://codepen.io/josephprecious/pen/abQmQbG", "title": "JS Pen"}
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {"url": "week02/design.html", "title": "Design Principles"}
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {"url": "week03/images/landscape.webp", "title": "Responsive Images"}
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {"url": "chamber/index.html", "title": "Chamber Project"}
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {"url": "week05/bom.html", "title": "DOM Manipulation"}
+        ]
+      }
+    ]
+  }

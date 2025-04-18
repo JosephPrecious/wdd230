@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
     <script src="scripts/getDates.js" defer> </script>
+    <script src="scripts/links.js" defer></script>
 
 </head>
 <body>
@@ -60,19 +61,15 @@
         <div class="secdiv">
             <section class="card">
                 <h2 class="htwo">Learning Activities</h2>
-                <ul class="unstyle">
-                    <li>Week 01: <a href="Week01">Layout|Media Query|JS Pen</a></li>
-                    <li>Week 02: <a href="Week02"></a></li>
-                    <li>Week 03: <a href="Week03"></a></li>
-                    <li>Week 04: <a href="Week04"></a></li>
-                    <li>Week 05: <a href="Week05"></a></li>
+                <ul class="unstyle" id="learning-activities">
+                  <!-- Dynamic content will be inserted here -->
                 </ul>
-            </section>
+              </section>
         
             <section class="card">
                 <h2 class="htwo">Information</h2>
                 <p class="unstyle" > ☀️ 75◦F - Sunshin</p>
-                <p class="unstyle"><span class="label">Number of Visits: </span><span class="visits"></span></p>
+                <p class="unstyle" id="weather-info"><span class="label">Number of Visits: </span><span class="visits"></span></p>
             </section> 
         </div>   
         <div class="map-container">
