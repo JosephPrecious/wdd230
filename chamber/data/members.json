@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "LAGOS INTERNATIONAL TRADE FAIR",
+      "address": "Tafawa Balewa Square, Lagos",
+      "phone": "+234 7005246724",
+      "website": "https://lagosinternationaltradefair.com",
+      "image": "LITF.webp",
+      "membership": "Gold"
+    },
+    {
+      "name": "Green Energy Solutions",
+      "address": "30 N Gould St Ste R, Sheridan, WY 82801, US",
+      "phone": "+1 30 729 620 82",
+      "website": "https://greenenergysolution.org/en/",
+      "image": "GES1.webp",
+      "membership": "Silver"
+    },
+    {
+      "name": "Tech Innovation",
+      "address": "KSA - Riyadh, Al- Malaz 60 St.",
+      "phone": "+966-11 291 2167",
+      "website": "https://tech-innovat.com",
+      "image": "Techin1.webp",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Team",
+      "address": "26 S Rio Grande St, Salt Lake City, UT84101",
+      "phone": "+801-784-3091",
+      "website": "https://www.hireteem.com/",
+      "image": "team.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Byu Pathway ",
+      "address": " 3 Triad Center, Suite 500 1125, Salt Lake City, UT 84180, United States",
+      "phone": "+1 801-353-1400",
+      "website": "https://www.byupathway.edu/",
+      "image": "byup1.webp",
+      "membership": "Gold"
+    },
+    {
+      "name": "EduSmart",
+      "address": " 6001 W William Cannon Dr Suite 203C, Austin, TX 78749, United States",
+      "phone": " +1 800-318-9172",
+      "website": "https://lms.edusmart.com",
+      "image": "edu.webp",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Urban Fashion",
+      "address": "6-56/6/1/A, NH9, Opposite IDPL Factory, Balanagar, Hyderabad - 500037",
+      "phone": "+91 90592 34065",
+      "website": "https://www.urbanofashion.com/",
+      "image": "ubano.webp",
+      "membership": "Gold"
+    }
+  ]
+}

@@ -73,3 +73,74 @@ if (!lastVisit) {
 
 localStorage.setItem('lastVisit', currentDate);
 });
+
+// Add this to your existing chamber.js
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('#memberDirectory')) {
+        let membersData = [];
+
+        // Load member data
+        fetch('data/members.json')
+            .then(response => response.json())
+            .then(data => {
+                membersData = data.members;
+                displayMembers(membersData);
+            })
+            .catch(error => console.error('Error loading members:', error));
+
+        // View toggle functionality
+        const gridViewButton = document.getElementById('gridView');
+        const listViewButton = document.getElementById('listView');
+        const directory = document.getElementById('memberDirectory');
+
+        gridViewButton.addEventListener('click', () => toggleView('grid'));
+        listViewButton.addEventListener('click', () => toggleView('list'));
+
+        function toggleView(viewType) {
+            directory.innerHTML = '';
+            if (viewType === 'grid') {
+                directory.classList.remove('list-view');
+                directory.classList.add('grid-view');
+                gridViewButton.classList.add('active');
+                listViewButton.classList.remove('active');
+            } else {
+                directory.classList.remove('grid-view');
+                directory.classList.add('list-view');
+                listViewButton.classList.add('active');
+                gridViewButton.classList.remove('active');
+            }
+            displayMembers(membersData);
+        }
+
+        function displayMembers(members) {
+            const directory = document.getElementById('memberDirectory');
+            directory.innerHTML = ''; // Clear existing content
+        
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                
+                card.innerHTML = `
+                    <picture>
+                        <source media="(max-width: 768px)" 
+                                srcset="images/${member.image}">
+                        <img src="images/${member.image}" 
+                             alt="${member.name}" 
+                             loading="lazy">
+                    </picture>
+                    <div class="member-info">
+                        <h3>${member.name}</h3>
+                        <p>📌 ${member.address}</p>
+                        <p>📞 ${member.phone}</p>
+                        <p>⭐ ${member.membership} Member</p>
+                        <a href="${member.website}" class="member-website" target="_blank">
+                            Visit Website
+                        </a>
+                    </div>
+                `;
+        
+                directory.appendChild(card);
+            });
+        }
+    }
+});
