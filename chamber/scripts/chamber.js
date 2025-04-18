@@ -74,6 +74,10 @@ if (!lastVisit) {
 localStorage.setItem('lastVisit', currentDate);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('timestamp').value = new Date().toISOString();
+});
+
 // Add this to your existing chamber.js
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#memberDirectory')) {

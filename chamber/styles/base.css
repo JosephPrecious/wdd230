@@ -588,3 +588,27 @@ button[type="submit"] {
 .member-website:hover {
     text-decoration: underline;
 }
+
+/* Add to your CSS file */
+.benefit-tier {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  /* Color accents for different tiers */
+  .benefit-tier.np { border-left: 4px solid #6c757d; }
+  .benefit-tier.bronze { border-left: 4px solid #cd7f32; }
+  .benefit-tier.silver { border-left: 4px solid #c0c0c0; }
+  .benefit-tier.gold { border-left: 4px solid #ffd700; }
+  
+  .benefit-tier h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .benefit-tier ul {
+    padding-left: 1.2rem;
+  }
