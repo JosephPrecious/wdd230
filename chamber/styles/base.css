@@ -612,3 +612,135 @@ button[type="submit"] {
   .benefit-tier ul {
     padding-left: 1.2rem;
   }
+
+  .weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #d8b4a0;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem auto;
+}
+
+/* Member Spotlights */
+#spotlightContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.spotlight {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px outset #d8b4a0;
+    text-align: center;
+}
+
+.spotlight img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Banner Styles */
+.event-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(74, 78, 105, 0.95);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    border-bottom: 2px solid #d8b4a0;
+}
+
+.close-banner {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #d8b4a0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.close-banner:hover {
+    color: #ffd700;
+}
+
+.dark-mode .forecast-day,
+.dark-mode .spotlight {
+    background: rgba(34, 34, 59, 0.9);
+    border-color: #1a365d;
+}
+
+.dark-mode .forecast-day p,
+.dark-mode .spotlight p {
+    color: #f8f9fa;
+}
+
+/* Current Event Styles */
+.event-image-container {
+    width: 100%;
+    max-width: 300px; /* Adjust based on your needs */
+    margin: 1rem auto;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 300px; /* Maximum size you want */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+.event-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.event-register-btn {
+    display: inline-block;
+    background-color: #1a4569;
+    color: white!important;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #0f2d44;
+}
+
+.event-register-btn:hover {
+    background-color: #0f2d44;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}

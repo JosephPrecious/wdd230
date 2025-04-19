@@ -104,17 +104,14 @@
         padding: 1rem;
     }
 
-    /* Desktop-only hover effect */
-    @media (hover: hover) {
-        .image-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+    .weather-forecast {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-two {
+        grid-template-columns: 1fr;
     }
 
-}
-
-@media (max-width: 768px) {
     .grid-view {
         grid-template-columns: 1fr;
     }
@@ -131,5 +128,24 @@
         max-width: 250px;
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+
+}
+
+   /* Desktop-only hover effect */
+   @media (hover: hover) {
+    .image-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+}
+
+@media (max-width: 480x) {
+    .forecast-day {
+        padding: 0.8rem;
+    }
+    
+    .spotlight {
+        padding: 1rem;
     }
 }

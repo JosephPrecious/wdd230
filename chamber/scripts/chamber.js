@@ -148,3 +148,111 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+ // Enhanced chamber.js
+        // Weather API Implementation
+        const apiKey = 'e204c804febcedeab100739eda6c5404';
+        const lat = 5.530244754131395;
+        const lon = 7.493441135878276;
+        const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+        async function fetchWeather() {
+            try {
+                const response = await fetch(weatherURL);
+                const data = await response.json();
+                updateWeatherUI(data);
+            } catch (error) {
+                console.error('Error fetching weather:', error);
+            }
+        }
+
+        function updateWeatherUI(data) {
+            // Current weather
+            document.querySelector('.temp').textContent = Math.round(data.list[0].main.temp);
+            document.querySelector('.condition').textContent = data.list[0].weather[0].description;
+
+            // 3-day forecast
+            const forecast = data.list.filter(item => 
+                item.dt_txt.includes('12:00:00')
+            ).slice(0, 3);
+
+            const forecastHTML = forecast.map(day => `
+                <div class="forecast-day">
+                    <p>${new Date(day.dt * 1000).toLocaleDateString('en-US', {weekday: 'short'})}</p>
+                    <p>${Math.round(day.main.temp)}°C</p>
+                    <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" 
+                        alt="${day.weather[0].description}">
+                </div>
+            `).join('');
+
+            document.querySelector('.weather-forecast').innerHTML = forecastHTML;
+        }
+
+        // Member Spotlights
+        // Update the displaySpotlights function in chamber.js
+        async function displaySpotlights() {
+            try {
+                const response = await fetch('data/members.json');
+                const data = await response.json();
+                const qualified = data.members.filter(m => 
+                    ['gold', 'silver'].includes(m.membership.toLowerCase())
+                );
+
+                // Improved random selection
+                const getRandomMembers = (array, count) => {
+                    const shuffled = [...array].sort(() => 0.5 - Math.random());
+                    return shuffled.slice(0, count);
+                };
+
+                const spotlights = getRandomMembers(qualified, 3);
+                
+                const container = document.getElementById('spotlightContainer');
+                container.innerHTML = spotlights.map(member => `
+                    <section class="spotlight">
+                        <h3>${member.name}</h3>
+                        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+                        <p>${member.description}</p>
+                        <p class="membership-tier">${member.membership} Member</p>
+                        <a href="${member.website}" target="_blank" class="spotlight-link">Visit Website</a>
+                    </section>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Error loading members:', error);
+                container.innerHTML = '<p>Member spotlights currently unavailable</p>';
+            }
+        }
+
+        // Event Banner
+        // Banner Control
+        function checkBannerDay() {
+            const today = new Date().getDay(); // Sunday = 0, Wednesday = 3
+            const banner = document.getElementById('chamberBanner');
+            
+            // Show only Mon(1), Tue(2), Wed(3)
+            if ([1, 2, 3].includes(today)) {
+                const isClosed = localStorage.getItem('bannerClosed');
+                if (!isClosed) {
+                    banner.style.display = 'block';
+                }
+            }
+        }
+
+        function closeBanner() {
+            document.getElementById('chamberBanner').style.display = 'none';
+            localStorage.setItem('bannerClosed', 'true');
+        }
+
+        // Initialize banner
+        document.addEventListener('DOMContentLoaded', () => {
+            // Attach close button handler
+            document.querySelector('.close-banner').addEventListener('click', closeBanner);
+            checkBannerDay();
+        });
+
+        // Initialize
+        window.addEventListener('load', () => {
+            fetchWeather();
+            displaySpotlights();
+            checkBannerDay();
+        });
